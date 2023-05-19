@@ -1,0 +1,13 @@
+
+name: CI Run
+on: [push]
+
+env:
+  MY_ENV_VAR: FLIPPER
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Test 1 - PASS"
+      - run: echo "Test 2 - FAIL" ; exit 1
